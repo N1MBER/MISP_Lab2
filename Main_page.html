@@ -6,6 +6,7 @@
     <script   src="http://code.jquery.com/jquery-3.4.1.js"   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="   crossorigin="anonymous"></script>    <title>Title</title>
 </head>
 <body>
+<div id="content">
     <header>
         <table>
             <tr>
@@ -20,9 +21,11 @@
     </header>
     <div>Me on GitHub: <a href="https://github.com/N1MBER/MISP_Lab2">click</a></div>
     <button id="SOS" >PUPA</button>
+    <button id="font">Font</button>
     <footer>Санкт-Петербургский Национальный Исследовательский Университет
         Информационных Технологий, Механики и Оптики
         ФКТиУ, кафедра Вычислительной техники</footer>
+</div>
 </body>
 </html>
 <script>
@@ -55,4 +58,38 @@
         }
         $("#SOS").css('background-color', ss)
     })
+    q = 0;
+    $("#font").click(function () {
+        q++;
+        if (q == 6)
+            q = 0
+        aa =""
+        switch (q) {
+            case 0:
+                aa ="Arial";
+                break;
+            case 1:
+                aa ="Times New Roman";
+                break;
+            case 2:
+                aa ="Chalkboard";
+                break;
+            case 3:
+                aa ="Helvetica";
+                break;
+            case 4:
+                aa ="Waseem";
+                break;
+            case 5:
+                aa ="Zapfino";
+                break;
+
+        }
+        $("#content").css('font-family', aa)
+    })
 </script>
+<style>
+    html{
+        font-family: Zapfino ;
+    }
+</style>
