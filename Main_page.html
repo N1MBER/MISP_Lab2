@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="main.css">
-    <title>Title</title>
+    <script   src="http://code.jquery.com/jquery-3.4.1.js"   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="   crossorigin="anonymous"></script>    <title>Title</title>
 </head>
 <body>
     <header>
@@ -19,8 +19,40 @@
         </table>
     </header>
     <div>Me on GitHub: <a href="https://github.com/N1MBER/MISP_Lab2">click</a></div>
+    <button id="SOS" >PUPA</button>
     <footer>Санкт-Петербургский Национальный Исследовательский Университет
         Информационных Технологий, Механики и Оптики
         ФКТиУ, кафедра Вычислительной техники</footer>
 </body>
 </html>
+<script>
+    i = 0;
+    $("#SOS").click(function () {
+        i++;
+        if (i == 6)
+            i = 0
+        ss =""
+        switch (i) {
+            case 0:
+                ss ="red";
+                break;
+            case 1:
+                ss ="orange";
+                break;
+            case 2:
+                ss ="yellow";
+                break;
+            case 3:
+                ss ="green";
+                break;
+            case 4:
+                ss ="blue";
+                break;
+            case 5:
+                ss ="purple";
+                break;
+
+        }
+        $("#SOS").css('background-color', ss)
+    })
+</script>
