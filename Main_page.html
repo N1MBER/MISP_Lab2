@@ -20,7 +20,8 @@
     </header>
     <div>Me on GitHub: <a href="https://github.com/N1MBER/MISP_Lab2">click</a></div>
     <button id="SOS" >PUPA</button>
-    <button id="back" >PUPA</button>
+    <button id="back" >back</button>
+    <button id="txt" >txt</button>
     <footer>Санкт-Петербургский Национальный Исследовательский Университет
         Информационных Технологий, Механики и Оптики
         ФКТиУ, кафедра Вычислительной техники</footer>
@@ -81,8 +82,35 @@
             case 5:
                 pp ="purple";
                 break;
-
         }
         $("html").css('background-color', pp)
+    })
+    k = 0;
+    $("#txt").click(function () {
+        k++;
+        if (k == 6)
+            k = 0
+        qq =""
+        switch (k) {
+            case 0:
+                qq ="red";
+                break;
+            case 1:
+                qq ="orange";
+                break;
+            case 2:
+                qq ="yellow";
+                break;
+            case 3:
+                qq ="green";
+                break;
+            case 4:
+                qq ="blue";
+                break;
+            case 5:
+                qq ="purple";
+                break;
+        }
+        $("*").css('color', qq)
     })
 </script>
