@@ -33,6 +33,38 @@
             </pre>
         </div>
     </div>
+    <div>
+        <h3>Выполнение</h3>
+        <table>
+            <tr>
+                <td></td>
+                <td>git init</td>
+            </tr>
+            <tr>
+                <td>r0</td>
+                <td>
+                    <pre>
+                        git config --local user.name user1
+                        git config --local user.email user1@mail.com
+                        git add *
+                        git commit -m "Breakpoint r0"
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>r1</td>
+                <td>
+                    <pre>
+                        git checkout -b branch1
+                        git config --local user.name user2
+                        git config --local user.email user2@mail.com
+                        git add *
+                        git commit -m "Breakpoint r1"
+                    </pre>
+                </td>
+            </tr>
+        </table>
+    </div>
     <footer>Санкт-Петербургский Национальный Исследовательский Университет
         Информационных Технологий, Механики и Оптики
         ФКТиУ, кафедра Вычислительной техники</footer>
