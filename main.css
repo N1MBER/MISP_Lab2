@@ -1,4 +1,4 @@
-html {
+html, body {
     font-family: Arial;
     background-color: black;
     color: white;
@@ -6,6 +6,11 @@ html {
 
 img{
     width: 50%;
+}
+
+#ll{
+    border: 3px bisque solid;
+    background: aqua;
 }
 
 
