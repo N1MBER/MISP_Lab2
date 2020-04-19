@@ -19,5 +19,8 @@ $(document).ready(function () {
             $("div").css('color', "white")
         }
     });
+    $("img").click(function () {
+        alert("Don't press on fcking image")
+    })
 })
 
