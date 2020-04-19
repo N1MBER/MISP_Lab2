@@ -2,12 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="pip.css">
+    <title>Lab2</title>
+
     <link rel="stylesheet" type="text/css" href="main.css">
     <script   src="http://code.jquery.com/jquery-3.4.1.js"   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="   crossorigin="anonymous"></script>    <title>Title</title>
+    <script src="./opa.js"></script>
 </head>
 <body>
 <div id="content">
-    <header>
+    <header style="border: 3px bisque solid; background: aqua;">
         <table>
             <tr>
                 <td>
@@ -19,9 +23,200 @@
             </tr>
         </table>
     </header>
+    <div>
+        <button id="press" class="sekas">Press</button>
+        <button id="change" class="sdsd">change</button>
+        <p>Задание</p>
+        <div>
+            <img src="picture.png" width="50%">
+            <pre>
+                Сконфигурировать в своём домашнем каталоге репозитории svn и git и загрузить в них начальную ревизию файлов с исходными кодами (в соответствии с выданным вариантом).
+                Воспроизвести последовательность команд для систем контроля версий svn и git, осуществляющих операции над исходным кодом, приведённые на блок-схеме.
+                При составлении последовательности команд необходимо учитывать следующие условия:
+                <ul>
+                    <li>Цвет элементов схемы указывает на пользователя, совершившего действие (красный - первый, синий - второй).</li>
+                    <li>Цифры над узлами - номер ревизии. Ревизии создаются последовательно.</li>
+                    <li>Необходимо разрешать конфликты между версиями, если они возникают.</li>
+                </ul>
+            </pre>
+        </div>
+    </div>
+    <img src="https://git-scm.com/images/logo@2x.png">
+
+    <div>
+        <h3>Выполнение</h3>
+        <table>
+            <tr>
+                <td></td>
+                <td>git init</td>
+            </tr>
+            <tr>
+                <td>r0</td>
+                <td>
+                    <pre>
+                        git config --local user.name user1
+                        git config --local user.email user1@mail.com
+                        git add *
+                        git commit -m "Breakpoint r0"
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>r1</td>
+                <td>
+                    <pre>
+                        git checkout -b branch1
+                        git config --local user.name user2
+                        git config --local user.email user2@mail.com
+                        git add *
+                        git commit -m "Breakpoint r1"
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>r2</td>
+                <td>
+                    <pre>
+                        git checkout -b branch2
+                        git config --local user.name user1
+                        git config --local user.email user1@mail.com
+                        git add .
+                        git commit -m "Breakpoint r2"
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>r3</td>
+                <td>
+                    <pre>
+                        git checkout master
+                        git add .
+                        git commit -m "Breakpoint r3"
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>r4</td>
+                <td>
+                    <pre>
+                        git add .
+                        git commit -m "Breakpoint r4"
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>r5</td>
+                <td>
+                    <pre>
+                        git checkout -b branch3
+                        git config --local user.name user2
+                        git config --local user.email user2@mail.com
+                        git add .
+                        git commit -m "Breakpoint r5"
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>r6</td>
+                <td>
+                    <pre>
+                        git checkout branch1
+                        git add .
+                        git commit -m "Breakpoint r6"
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>r7</td>
+                <td>
+                        <pre>
+                            git checkout -b branch4
+                            git config --local user.name user1
+                            git config --local user.email user1@mail.com
+                            git add .
+                            git commit -m "Breakpoint r7"
+                        </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>r8</td>
+                <td>
+                    <pre>
+                        git checkout master
+                        git add .
+                        git commit -m "Breakpoint r8"
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>r9</td>
+                <td>
+                    <pre>
+                        git checkout -b branch5
+                        git add .
+                        git commit -m "Breakpoint r9"
+                    </pre>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div>Me on GitHub: <a href="https://github.com/N1MBER/MISP_Lab2">click</a></div>
     <button id="SOS" >PUPA</button>
     <button id="font">Font</button>
+    <button id="back" >back</button>
+    <button id="txt" >txt</button>
+    <div>
+        <table>
+            <thead>Подсказка</thead>
+            <tr>
+                <th>Команда</th>
+                <th>Значение</th>
+            </tr>
+            <tr>
+                <td>
+                    git init
+                </td>
+                <td>
+                    <pre>
+                        Инициализация гита в данной директории
+                    </pre>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    git status
+                </td>
+                <td>
+                    <pre>
+                        Показывает статус текущих состояний файлов в файловой системе и
+                        информацию о ветви, в которой происходит редавктирование
+                    </pre>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <input type="radio" name="r" id="r">
+    <input type="radio" name="r" id="r1">
+    <button>PEEP</button>
+    <pre id="txs">        DON'T
+        LOOK
+        FU*K
+        YOU</pre>
+    <script>
+        $("#txs").click(function () {
+            alert("AIRGNIDA25300000")
+        });
+        k = false
+        $("button").click(function () {
+            k != k
+            if (k == true){
+                $("button").css('background-color','yellow')
+            }
+            else
+                $("button").css('background-color','red')
+        })
+    </script>
+    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png">
     <footer>Санкт-Петербургский Национальный Исследовательский Университет
         Информационных Технологий, Механики и Оптики
         ФКТиУ, кафедра Вычислительной техники</footer>
@@ -66,29 +261,85 @@
         q++;
         if (q == 6)
             q = 0
-        aa =""
+        aa = ""
         switch (q) {
             case 0:
-                aa ="Arial";
+                aa = "Arial";
                 break;
             case 1:
-                aa ="Times New Roman";
+                aa = "Times New Roman";
                 break;
             case 2:
-                aa ="Chalkboard";
+                aa = "Chalkboard";
                 break;
             case 3:
-                aa ="Helvetica";
+                aa = "Helvetica";
                 break;
             case 4:
-                aa ="Waseem";
+                aa = "Waseem";
                 break;
             case 5:
-                aa ="Zapfino";
+                aa = "Zapfino";
                 break;
 
         }
         $("#content").css('font-family', aa)
+    })
+    j = 0;
+    $("#back").click(function () {
+        j++;
+        if (j == 6)
+            j = 0
+        pp =""
+        switch (j) {
+            case 0:
+                pp ="red";
+                break;
+            case 1:
+                pp ="orange";
+                break;
+            case 2:
+                pp ="yellow";
+                break;
+            case 3:
+                pp ="green";
+                break;
+            case 4:
+                pp ="blue";
+                break;
+            case 5:
+                pp ="purple";
+                break;
+        }
+        $("html").css('background-color', pp)
+    })
+    k = 0;
+    $("#txt").click(function () {
+        k++;
+        if (k == 6)
+            k = 0
+        qq =""
+        switch (k) {
+            case 0:
+                qq ="red";
+                break;
+            case 1:
+                qq ="orange";
+                break;
+            case 2:
+                qq ="yellow";
+                break;
+            case 3:
+                qq ="green";
+                break;
+            case 4:
+                qq ="blue";
+                break;
+            case 5:
+                qq ="purple";
+                break;
+        }
+        $("*").css('color', qq)
     })
 </script>
 <style>
